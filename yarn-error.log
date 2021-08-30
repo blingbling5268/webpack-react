@@ -1,0 +1,59 @@
+Arguments: 
+  D:\Node\node.exe D:\Node\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Users\puddi\bin;D:\Git\Git\mingw64\bin;D:\Git\Git\usr\local\bin;D:\Git\Git\usr\bin;D:\Git\Git\usr\bin;D:\Git\Git\mingw64\bin;D:\Git\Git\usr\bin;C:\Users\puddi\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk1.8.0_74\bin;C:\Program Files\Java\jdk1.8.0_74\jre\bin;D:\Git\Git\usr\bin;D:\Git\Git\mingw64\libexec\git-core;D:\Git\Git\mingw64\bin;D:\Tomcat\apache-tomcat-7.0.107-windows-x64\apache-tomcat-7.0.107\bin;D:\Vscode\Microsoft VS Code\bin;D:\Nvm\nvm;D:\Node;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Users\puddi\AppData\Local\Microsoft\WindowsApps;D:\Nvm\nvm;C:\Users\puddi\AppData\Local\Programs\Fiddler;D:\fiddler;D:\Git\Git\usr\bin\vendor_perl;D:\Git\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.22.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect ETIMEDOUT 104.16.25.35:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16)
+
+npm manifest: 
+  {
+    "name": "webpack-react",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "^7.13.8",
+      "@babel/preset-env": "^7.13.8",
+      "@babel/preset-react": "^7.12.13",
+      "babel-loader": "^8.2.2",
+      "chalk": "^4.1.0",
+      "clean-webpack-plugin": "^3.0.0",
+      "css-loader": "^5.1.0",
+      "html-webpack-plugin": "^5.2.0",
+      "ip": "^1.1.5",
+      "style-loader": "^2.0.0",
+      "progress-bar-webpack-plugin": "^2.1.0",
+      "speed-measure-webpack-plugin": "^1.4.2",
+      "webpack": "^5.24.2",
+      "webpack-cli": "^4.5.0",
+      "webpack-dev-server": "^3.11.2"
+    },
+    "dependencies": {
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

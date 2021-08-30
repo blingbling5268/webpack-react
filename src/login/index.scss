@@ -1,0 +1,32 @@
+.login{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #4980d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  .box{
+    width: 500px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    .box-title{
+      text-align: center;
+      font-size: 18px;
+      padding: 15px;
+    }
+    .row-label{
+      display: inline-block;
+      width: 100%;
+      padding: 8px 0;
+      font-size: 16px;
+    }
+    .login-btn{
+      margin: 40px 0 0 0;
+    }
+    .row-error{
+      padding: 10px 0;
+      color:#ef485e;
+    }
+  }
+}
