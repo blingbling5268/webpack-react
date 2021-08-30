@@ -1,6 +1,8 @@
+$base-backgound-color: #e9e9e9;
+
 .home-header {
   width: 100%;
-  height: 50px;
-  line-height: 50px;
-  background: #cfcfd2;
+  height: 64px;
+  line-height: 64px;
+  background: $base-backgound-color;
 }
