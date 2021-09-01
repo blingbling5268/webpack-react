@@ -1,17 +1,3 @@
-// @mixin bg-color($key){
-//   // backgroundColor: map-get($colors-default, $key);
-//   [data-theme="default"] & {
-// //     background-color: map-get($colors-tiffany-blue, $key);
-//   }
-// }
-
-// @mixin text-color($key){
-//   // color: map-get($colors-default, $key);
-//   [data-theme="tiffany-blue"] & {
-//     // color: map-get($colors-tiffany-blue, $key);
-//   }
-// }
-
 @mixin bg-color($key) {
   background-color: map-get($map: $colors-light, $key: $key);
   [data-theme='dark'] & {

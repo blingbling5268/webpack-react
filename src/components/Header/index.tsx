@@ -36,13 +36,14 @@ const Header = () => {
 
   const menu = (
     <Menu>
-      {themeList.map((item) => {
-        item.id != themeName && (
-          <Menu.Item key={item.id} onClick={() => changeTheme(item)}>
-            {item.menuName}
-          </Menu.Item>
-        );
-      })}
+      {themeList.map(
+        (item) =>
+          item.id != themeName && (
+            <Menu.Item key={item.id} onClick={() => changeTheme(item)}>
+              {item.menuName}
+            </Menu.Item>
+          ),
+      )}
     </Menu>
   );
 
