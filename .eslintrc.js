@@ -143,5 +143,6 @@ module.exports = {
     'no-continue': OFF,
     // 此规则不允许使用混合空格和制表符进行缩进。
     'no-mixed-spaces-and-tabs': [0],
+    enforceForJSX: true,
   },
 };

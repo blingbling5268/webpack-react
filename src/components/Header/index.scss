@@ -1,8 +1,14 @@
-$base-backgound-color: #e9e9e9;
+@import '../../assets/sass/variable.scss';
+@import '../../assets/sass/mixin.scss';
 
 .home-header {
   width: 100%;
   height: 64px;
   line-height: 64px;
-  background: $base-backgound-color;
+  @include bg-color(bg-color-1);
+  .home-theme {
+    float: right;
+    margin-right: 15px;
+    @include text-color(theme-btn-1);
+  }
 }
