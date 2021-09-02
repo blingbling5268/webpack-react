@@ -1,0 +1,37 @@
+.form {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  .form-left {
+    width: 400px;
+    font-size: 20px;
+    font-weight: bold;
+    &-title {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .sub {
+      margin-bottom: 30px;
+      &-input,
+      &-select,
+      &-time {
+        width: 300px !important;
+      }
+    }
+  }
+  .form-center {
+    flex: 1;
+    border: 1px solid #008dff;
+    margin: 0 30px;
+    padding: 20px;
+  }
+  .form-right {
+    width: 400px;
+    font-size: 20px;
+    font-weight: bold;
+    &-title {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  }
+}
