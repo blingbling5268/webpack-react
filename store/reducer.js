@@ -1,8 +1,9 @@
 /* eslint-disable indent */
-import { USER_INFO } from './user';
+import { USER_INFO, FORM_LIST } from './user';
 
 const defaultState = {
   userInfo: {},
+  formList: [],
 };
 
 export default (state = defaultState, action) => {
@@ -12,6 +13,11 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         userInfo: action.value,
+      };
+    case FORM_LIST:
+      return {
+        ...state,
+        formList: action.formList,
       };
     default:
       return state;

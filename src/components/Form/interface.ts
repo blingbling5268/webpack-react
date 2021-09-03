@@ -6,3 +6,8 @@ export interface FormItemObj {
   message: string;
   keyValue: string;
 }
+
+export interface ContextObj {
+  formData: FormItemObj;
+  setFormData: React.Dispatch<FormItemObj>;
+}

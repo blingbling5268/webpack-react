@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.scss';
-import { Input, Select } from 'antd';
 import Subgroup from './subgroup';
 import Content from './content';
 import Function from './function';
+import { AppContext } from './app-context';
+import { FormItemObj } from './interface';
 
 const Form = () => {
-  const { Option } = Select;
+  const [formData, setFormData] = useState<FormItemObj>({
+    type: '',
+    label: '',
+    required: false,
+    rules: '',
+    message: '',
+    keyValue: '',
+  });
+
   return (
     <div className='form'>
-      <Subgroup />
-      <Content />
-      <Function />
+      <AppContext.Provider value={{ formData, setFormData }}>
+        <Subgroup />
+        <Content />
+        <Function />
+      </AppContext.Provider>
     </div>
   );
 };

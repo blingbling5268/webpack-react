@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './index.scss';
 import { Form, Input, Button, Radio } from 'antd';
+import { AppContext } from './app-context';
 
 const Function = () => {
+  const { setFormData } = useContext(AppContext);
   const [value, setValue] = useState(1);
   const onFinish = (values: any) => {
-    console.log('Success:', values);
+    setFormData({ ...values });
   };
 
   const onFinishFailed = (errorInfo: any) => {
