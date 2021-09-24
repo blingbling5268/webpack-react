@@ -7,7 +7,15 @@ export interface FormItemObj {
   keyValue: string;
 }
 
+export interface FormDataObj {
+  label: string;
+  required: boolean;
+  rules: string;
+  message: string;
+  keyValue: string;
+}
+
 export interface ContextObj {
-  formData: FormItemObj;
+  formData: FormDataObj;
   setFormData: React.Dispatch<FormItemObj>;
 }

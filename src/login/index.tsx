@@ -27,7 +27,7 @@ const Login = () => {
       store.dispatch(action);
 
       console.log(121212, store.getState().userInfo.token);
-      history.push('/home');
+      history.push('/main');
     } else {
       setIsError(true);
     }

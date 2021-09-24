@@ -12,16 +12,10 @@ const Content = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    console.log(121212, index);
     const newFormList = [...formList];
-    newFormList[index] = { ...formData };
+    newFormList[index] = { ...newFormList[index], ...formData };
     setFormList(newFormList);
-    console.log(formList);
   }, [formData]);
-
-  useEffect(() => {
-    console.log(5555, index);
-  }, [index]);
 
   const onFinish = (values: any) => {
     console.log('Success:', values);
@@ -35,22 +29,20 @@ const Content = () => {
     e.preventDefault();
     const type = e.dataTransfer.getData('type');
     const newFormList = [...formList];
-    newFormList[index].type = type;
-    // newFormList.push({
-    //   type: type,
-    //   label: '',
-    //   required: false,
-    //   rules: '',
-    //   message: '',
-    //   keyValue: '',
-    // });
+    newFormList.push({
+      type: type,
+      label: '',
+      required: false,
+      rules: '',
+      message: '',
+      keyValue: '',
+    });
     setIndex(newFormList.length - 1);
     setFormData({ ...formData, type: type });
     setFormList(newFormList);
   };
 
   const allowDrop = (e: React.DragEvent<HTMLDivElement>) => {
-    console.log('onDragOver', e);
     e.preventDefault();
   };
 

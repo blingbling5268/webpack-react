@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './index.scss';
 import { Form, Input, Button, Radio } from 'antd';
 import { AppContext } from './app-context';
@@ -6,8 +6,12 @@ import { AppContext } from './app-context';
 const Function = () => {
   const { setFormData } = useContext(AppContext);
   const [value, setValue] = useState(1);
+  const [form] = Form.useForm();
+
   const onFinish = (values: any) => {
     setFormData({ ...values });
+    form.resetFields();
+    console.log(values);
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -20,10 +24,11 @@ const Function = () => {
         name='func'
         labelCol={{ span: 6 }}
         wrapperCol={{ span: 16 }}
-        initialValues={{ remember: true }}
+        initialValues={{ label: '', keyValue: '', required: false, rules: '', message: '' }}
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
         autoComplete='off'
+        form={form}
       >
         <Form.Item label='文案' name='label' rules={[{ required: true, message: '请输入文案' }]}>
           <Input />

@@ -16,7 +16,6 @@ const Subgroup = () => {
    * @date: 2021-09-02 11:24:58
    */
   const drag = (e: React.DragEvent<HTMLDivElement>): void => {
-    console.log('onDragStart', e);
     const dataset: any = (e.target as unknown as HTMLDivElement).dataset;
     e.dataTransfer.setData('type', dataset.type);
   };

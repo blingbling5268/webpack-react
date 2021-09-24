@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/lib/integration/react';
-import AppRouter from '../router';
+import AppRouter from '../router/index';
 import store, { persistor } from '../store/index';
 
 const App = () => (
