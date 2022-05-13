@@ -1,11 +1,18 @@
+/*
+ * @Author: liubo lb@hzguode.com
+ * @Date: 2022-05-10 09:10:50
+ * @LastEditors: liubo lb@hzguode.com
+ * @LastEditTime: 2022-05-13 10:20:50
+ * @FilePath: \webpack-react\src\Home\index.tsx
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import React from 'react';
 import Header from '@/components/Header';
 import Form from '@/components/Form';
 import First from '@/First';
 import { menuList } from '@/menu';
 import { Layout, Menu } from 'antd';
-import { Link, HashRouter as Router, Route, Switch } from 'react-router-dom';
-import { createHashHistory } from 'history';
+import { Link, BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import {
   AppstoreOutlined,
   PieChartOutlined,
@@ -17,8 +24,7 @@ import './index.scss';
 
 const { Sider, Content } = Layout;
 const { SubMenu } = Menu;
-const history = createHashHistory();
-
+console.log()
 const Home = () => (
   <div className='home'>
     <Layout>
@@ -36,8 +42,8 @@ const Home = () => (
         <Content>
           <Router>
             <Switch>
-              <Route exact path='/main/first' component={First} />
-              <Route exact path='/main/form' component={Form} />
+              <Route exact path='/main' component={First} />
+              <Route path='/main/form' component={Form} />
             </Switch>
           </Router>
         </Content>
@@ -46,4 +52,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default withRouter(Home);

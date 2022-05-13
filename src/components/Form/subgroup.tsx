@@ -1,8 +1,18 @@
+/*
+ * @Author: liubo lb@hzguode.com
+ * @Date: 2022-05-10 09:10:50
+ * @LastEditors: liubo lb@hzguode.com
+ * @LastEditTime: 2022-05-10 10:14:48
+ * @FilePath: \webpack-react\src\components\Form\subgroup.tsx
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import React, { useState } from 'react';
 import './index.scss';
 import { Input, Select, DatePicker, Radio, Checkbox } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import moment from 'moment';
+
+const RangePicker:any= DatePicker.RangePicker
 
 const Subgroup = () => {
   const { Option } = Select;
@@ -33,7 +43,8 @@ const Subgroup = () => {
         </Select>
       </div>
       <div className='sub' data-type='time' draggable='true' onDragStart={drag}>
-        <DatePicker className='sub-time' />
+        {/* <DatePicker className='sub-time' /> */}
+        <RangePicker />
       </div>
       <div className='sub' data-type='radio' draggable='true' onDragStart={drag}>
         <Radio.Group value={value}>

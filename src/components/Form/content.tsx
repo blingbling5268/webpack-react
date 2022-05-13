@@ -66,7 +66,7 @@ const Content = () => {
           </Radio.Group>
         );
       case 'time':
-        return <DatePicker className='sub-time' />;
+        // return <DatePicker className='sub-time' />;
       case 'checkbox':
         return <Checkbox.Group options={plainOptions} defaultValue={['Apple']} />;
       default:
