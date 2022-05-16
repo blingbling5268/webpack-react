@@ -1,3 +1,11 @@
+/*
+ * @Author: liubo lb@hzguode.com
+ * @Date: 2022-05-10 09:10:50
+ * @LastEditors: liubo lb@hzguode.com
+ * @LastEditTime: 2022-05-16 17:54:53
+ * @FilePath: \webpack-react\src\login\index.tsx
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import React, { useState } from 'react';
 import './index.scss';
 import { Input, Button } from 'antd';
@@ -6,28 +14,28 @@ import { useHistory } from 'react-router-dom';
 import { LoginParams } from './interface';
 import store from '../../store';
 import { USER_INFO } from '../../store/user';
+import { successApi, failApi } from '../serviceApi/index'
 
 const Login = () => {
   const history = useHistory();
   const [params, setParams] = useState<LoginParams>({ username: '', password: '' });
   const [isError, setIsError] = useState(false);
 
-  const login = () => {
-    if (params.username === 'admin' && params.password === '123456') {
+  const login = async () => {
+    const res = await successApi(params);
+    console.log(1212, res)
+    if (res) {
       setIsError(false);
       const action = {
         type: USER_INFO,
         value: {
-          token: '12345',
-          username: 'admin',
-          userId: '0001',
+          ...res.data
         },
       };
 
       store.dispatch(action);
 
-      console.log(121212, store.getState().userInfo.token);
-      history.push('/main');
+      history.push('/first');
     } else {
       setIsError(true);
     }

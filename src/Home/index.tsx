@@ -2,7 +2,7 @@
  * @Author: liubo lb@hzguode.com
  * @Date: 2022-05-10 09:10:50
  * @LastEditors: liubo lb@hzguode.com
- * @LastEditTime: 2022-05-13 15:48:42
+ * @LastEditTime: 2022-05-16 09:26:24
  * @FilePath: \webpack-react\src\Home\index.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -55,9 +55,9 @@ const Home = () => (
         <Header />
         <Content>
           <Switch>
-            <Route path='/main' component={First} />
-            <Route path='/main/form' component={Form} />
-            <Route path='/main/settings/personal' component={Personal} />
+            <Route path='/first' component={First} />
+            <Route path='/form' component={Form} />
+            <Route path='/settings/personal' component={Personal} />
           </Switch>
         </Content>
       </Layout>
